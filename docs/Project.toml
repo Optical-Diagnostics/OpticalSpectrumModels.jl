@@ -1,0 +1,8 @@
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+SpectraUtils = "a0c45ec9-8886-4288-b58f-471f3de187f0"
+SpectralLines = "cd40e1e5-3471-48e2-9172-144f5d64a913"
+
+[sources]
+SpectraUtils = {path = ".."}
+SpectralLines = {path = "../../SpectralLines.jl"}
