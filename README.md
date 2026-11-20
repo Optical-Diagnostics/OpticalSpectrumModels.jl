@@ -1,14 +1,14 @@
 # SpectraUtils
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://jqfeld.github.io/SpectraUtils.jl/stable/)
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://jqfeld.github.io/SpectraUtils.jl/dev/)
-[![Build Status](https://github.com/jqfeld/SpectraUtils.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/jqfeld/SpectraUtils.jl/actions/workflows/CI.yml?query=branch%3Amain)
-[![Coverage](https://codecov.io/gh/jqfeld/SpectraUtils.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/jqfeld/SpectraUtils.jl)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://Optical-Diagnostics.github.io/SpectraUtils.jl/stable/)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://Optical-Diagnostics.github.io/SpectraUtils.jl/dev/)
+[![Build Status](https://github.com/Optical-Diagnostics/SpectraUtils.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/Optical-Diagnostics/SpectraUtils.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![Coverage](https://codecov.io/gh/Optical-Diagnostics/SpectraUtils.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/Optical-Diagnostics/SpectraUtils.jl)
 
 SpectraUtils.jl builds physical spectroscopic models (species states,
 transitions, population distributions, and full emission/radiance spectra) on
 top of the line-shape and line-synthesis primitives of
-[SpectralLines.jl](https://github.com/jqfeld/SpectralLines.jl), which it
+[SpectralLines.jl](https://github.com/Optical-Diagnostics/SpectralLines.jl), which it
 re-exports. It also reads HITRAN/HITEMP line lists and estimates Doppler and
 collisional linewidths from physical parameters.
 
