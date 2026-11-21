@@ -5,10 +5,10 @@ DocMeta.setdocmeta!(SpectraUtils, :DocTestSetup, :(using SpectraUtils); recursiv
 
 makedocs(;
     modules=[SpectraUtils],
-    authors="Jan Kuhfeld <jan@kuhfeld.net> and contributors",
+    authors="Jan Kuhfeld <jankuhfeld@plasma-matters.nl> and contributors",
     sitename="SpectraUtils.jl",
     format=Documenter.HTML(;
-        canonical="https://jqfeld.github.io/SpectraUtils.jl",
+        canonical="https://optical-diagnostics.github.io/SpectraUtils.jl",
         edit_link="main",
         assets=String[],
     ),
@@ -21,6 +21,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/jqfeld/SpectraUtils.jl",
+    repo="github.com/Optical-Diagnostics/SpectraUtils.jl",
     devbranch="main",
 )

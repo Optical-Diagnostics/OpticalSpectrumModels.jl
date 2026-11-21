@@ -1,7 +1,7 @@
 # SpectraUtils
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://Optical-Diagnostics.github.io/SpectraUtils.jl/stable/)
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://Optical-Diagnostics.github.io/SpectraUtils.jl/dev/)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://optical-diagnostics.github.io/SpectraUtils.jl/stable/)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://optical-diagnostics.github.io/SpectraUtils.jl/dev/)
 [![Build Status](https://github.com/Optical-Diagnostics/SpectraUtils.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/Optical-Diagnostics/SpectraUtils.jl/actions/workflows/CI.yml?query=branch%3Amain)
 [![Coverage](https://codecov.io/gh/Optical-Diagnostics/SpectraUtils.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/Optical-Diagnostics/SpectraUtils.jl)
 
@@ -40,6 +40,6 @@ sp = EmissionSpectrum(;
 spectrum = sp(wavenumbers, ComponentVector(T = 1500.0, mass = 4.65e-26, gamma = 0.05, sigma_inst = 0.2))
 ```
 
-See the [documentation](https://jqfeld.github.io/SpectraUtils.jl/dev/) for
+See the [documentation](https://optical-diagnostics.github.io/SpectraUtils.jl/dev/) for
 self-absorbing, absorption and multi-slab models, HITRAN and ExoMol line lists,
 and backgrounds.
