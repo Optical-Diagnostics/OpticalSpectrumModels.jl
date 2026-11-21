@@ -12,8 +12,9 @@ SpectralLines = "cd40e1e5-3471-48e2-9172-144f5d64a913"
 [weakdeps]
 ExoMol = "ad33b8ab-ae41-41db-81f7-3b0c63c48de0"
 
-[sources]
-SpectralLines = {rev = "main", url = "https://github.com/Optical-Diagnostics/SpectralLines.jl.git"}
+[sources.SpectralLines]
+rev = "main"
+url = "https://github.com/Optical-Diagnostics/SpectralLines.jl.git"
 
 [extensions]
 SpectraUtilsExoMolExt = "ExoMol"
@@ -21,7 +22,7 @@ SpectraUtilsExoMolExt = "ExoMol"
 [compat]
 Aqua = "0.8"
 ComponentArrays = "0.15"
-DataInterpolations = "9"
+DataInterpolations = "9, 10"
 ExoMol = "0.2"
 ForwardDiff = "1"
 JET = "0.11.5, 0.12, 0.13"
