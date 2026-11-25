@@ -1,14 +1,14 @@
-using SpectraUtils
+using OpticalSpectrumModels
 using Documenter
 
-DocMeta.setdocmeta!(SpectraUtils, :DocTestSetup, :(using SpectraUtils); recursive=true)
+DocMeta.setdocmeta!(OpticalSpectrumModels, :DocTestSetup, :(using OpticalSpectrumModels); recursive=true)
 
 makedocs(;
-    modules=[SpectraUtils],
+    modules=[OpticalSpectrumModels],
     authors="Jan Kuhfeld <jankuhfeld@plasma-matters.nl> and contributors",
-    sitename="SpectraUtils.jl",
+    sitename="OpticalSpectrumModels.jl",
     format=Documenter.HTML(;
-        canonical="https://optical-diagnostics.github.io/SpectraUtils.jl",
+        canonical="https://optical-diagnostics.github.io/OpticalSpectrumModels.jl",
         edit_link="main",
         assets=String[],
     ),
@@ -21,6 +21,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/Optical-Diagnostics/SpectraUtils.jl",
+    repo="github.com/Optical-Diagnostics/OpticalSpectrumModels.jl",
     devbranch="main",
 )

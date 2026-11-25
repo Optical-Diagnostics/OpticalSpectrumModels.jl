@@ -1,5 +1,5 @@
-using SpectraUtils
-using SpectraUtils: h, c0, kB
+using OpticalSpectrumModels
+using OpticalSpectrumModels: h, c0, kB
 using Test
 using ComponentArrays
 

@@ -1,5 +1,5 @@
-using SpectraUtils
-using SpectraUtils: h, c0, kB
+using OpticalSpectrumModels
+using OpticalSpectrumModels: h, c0, kB
 using ExoMol
 using ComponentArrays
 using DelimitedFiles
@@ -72,7 +72,7 @@ end
 const bd = TwoTemperatureBoltzmann(Evib, states_by_v)
 
 # OES-toolbox's pseudo-Voigt takes a mixing fraction η (its "shape", 0 for
-# Gaussian, 1 for Lorentzian) and one shared FWHM. SpectraUtils's `PseudoVoigt`
+# Gaussian, 1 for Lorentzian) and one shared FWHM. OpticalSpectrumModels's `PseudoVoigt`
 # derives η from separate Gaussian and Lorentzian widths, so a local callable
 # is used here. `convolve_spectrum` needs only a callable with an `fwhm`
 # method.
@@ -85,7 +85,7 @@ function (pv::SharedFWHMPseudoVoigt)(x)
     sigma = pv.fwhm / (2 * sqrt(2 * log(2)))
     return pv.eta * Lorentzian(hwhm)(x) + (1 - pv.eta) * Gaussian(sigma)(x)
 end
-SpectraUtils.fwhm(pv::SharedFWHMPseudoVoigt) = pv.fwhm
+OpticalSpectrumModels.fwhm(pv::SharedFWHMPseudoVoigt) = pv.fwhm
 
 const instrument = SharedFWHMPseudoVoigt(0.01, 0.5)  # width=0.01 nm, shape η=0.5
 

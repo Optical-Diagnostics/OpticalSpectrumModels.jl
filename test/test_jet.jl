@@ -1,8 +1,8 @@
 using Test, JET
-using SpectraUtils
+using OpticalSpectrumModels
 using ComponentArrays
 
-const TM = (SpectraUtils,)   # target_modules shorthand
+const TM = (OpticalSpectrumModels,)   # target_modules shorthand
 
 @testset "JET call analysis" begin
     params = ComponentVector(T = 500.0)

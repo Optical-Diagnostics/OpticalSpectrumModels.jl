@@ -18,7 +18,7 @@ As above, with the mass from `species` instead of a supplied `m`. Uses the true
 isotopologue mass, not the sum of mass numbers.
 
 Works for any `species` with a `molecular_mass_kg` method:
-`ExoMol.Isotopologue` via `SpectraUtilsExoMolExt`, or for HITRAN
+`ExoMol.Isotopologue` via `OpticalSpectrumModelsExoMolExt`, or for HITRAN
 `molecular_mass_kg(HITRAN.molparam(mol_id, iso))`.
 """
 @inline sigma_doppler(f0, T, species) = sigma_doppler(f0, T; m = molecular_mass_kg(species))
@@ -27,7 +27,7 @@ Works for any `species` with a `molecular_mass_kg` method:
     molecular_mass_kg(species) -> m [kg]
 
 Molecular mass of `species` in kilograms. Implemented for HITRAN `molparam`
-entries here and for `ExoMol.Isotopologue` in `SpectraUtilsExoMolExt`. Extend it
+entries here and for `ExoMol.Isotopologue` in `OpticalSpectrumModelsExoMolExt`. Extend it
 for other line-list sources to make [`sigma_doppler`](@ref)'s three-argument
 form work with them.
 """

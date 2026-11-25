@@ -1,11 +1,11 @@
-# SpectraUtils
+# OpticalSpectrumModels
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://optical-diagnostics.github.io/SpectraUtils.jl/stable/)
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://optical-diagnostics.github.io/SpectraUtils.jl/dev/)
-[![Build Status](https://github.com/Optical-Diagnostics/SpectraUtils.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/Optical-Diagnostics/SpectraUtils.jl/actions/workflows/CI.yml?query=branch%3Amain)
-[![Coverage](https://codecov.io/gh/Optical-Diagnostics/SpectraUtils.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/Optical-Diagnostics/SpectraUtils.jl)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://optical-diagnostics.github.io/OpticalSpectrumModels.jl/stable/)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://optical-diagnostics.github.io/OpticalSpectrumModels.jl/dev/)
+[![Build Status](https://github.com/Optical-Diagnostics/OpticalSpectrumModels.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/Optical-Diagnostics/OpticalSpectrumModels.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![Coverage](https://codecov.io/gh/Optical-Diagnostics/OpticalSpectrumModels.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/Optical-Diagnostics/OpticalSpectrumModels.jl)
 
-SpectraUtils.jl builds physical spectroscopic models (species states,
+OpticalSpectrumModels.jl builds physical spectroscopic models (species states,
 transitions, population distributions, and full emission/radiance spectra) on
 top of the line-shape and line-synthesis primitives of
 [SpectralLines.jl](https://github.com/Optical-Diagnostics/SpectralLines.jl), which it
@@ -18,7 +18,7 @@ A toy band of rotational lines at 1500 K, Doppler- and pressure-broadened, seen
 through a Gaussian instrument:
 
 ```julia
-using SpectraUtils, ComponentArrays
+using OpticalSpectrumModels, ComponentArrays
 
 ground = State(:X, 0, 0, 0.0, 1)
 upper(J) = State(:A, 0, J, 20000.0 + 2.0 * J * (J + 1), 2J + 1)
@@ -40,6 +40,6 @@ sp = EmissionSpectrum(;
 spectrum = sp(wavenumbers, ComponentVector(T = 1500.0, mass = 4.65e-26, gamma = 0.05, sigma_inst = 0.2))
 ```
 
-See the [documentation](https://optical-diagnostics.github.io/SpectraUtils.jl/dev/) for
+See the [documentation](https://optical-diagnostics.github.io/OpticalSpectrumModels.jl/dev/) for
 self-absorbing, absorption and multi-slab models, HITRAN and ExoMol line lists,
 and backgrounds.

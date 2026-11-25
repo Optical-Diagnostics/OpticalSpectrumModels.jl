@@ -3,11 +3,11 @@ BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
 ComponentArrays = "b0b7db55-cfe3-40fc-9ded-d10e2dbeff66"
 ExoMol = "ad33b8ab-ae41-41db-81f7-3b0c63c48de0"
 ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
-SpectraUtils = "a0c45ec9-8886-4288-b58f-471f3de187f0"
+OpticalSpectrumModels = "a0c45ec9-8886-4288-b58f-471f3de187f0"
 SpectralLines = "cd40e1e5-3471-48e2-9172-144f5d64a913"
 
 [sources]
-SpectraUtils = {path = ".."}
+OpticalSpectrumModels = {path = ".."}
 SpectralLines = {path = "../../../../../../workspace/SpectralLines.jl"}
 
 [compat]

@@ -1,4 +1,4 @@
-using SpectraUtils
+using OpticalSpectrumModels
 using Test
 using ComponentArrays
 using ForwardDiff
@@ -159,7 +159,7 @@ const NL = (number_density_function = (p) -> p[:N],
     end
 
     @testset "_combine_radiance: α → 0 values and derivatives" begin
-        cr = SpectraUtils._combine_radiance
+        cr = OpticalSpectrumModels._combine_radiance
         j, L, I₀ = 2.0, 5.0, 0.3
         # Exact α = 0: optically-thin limit j·L plus untouched I₀.
         @test cr(j, 0.0, L, I₀) == j * L + I₀
@@ -222,7 +222,7 @@ const NL = (number_density_function = (p) -> p[:N],
         @test_throws ArgumentError RadianceSpectrum(;
             transitions = empty_tr, distribution_function = bd,
             lineshape_function = (t, p) -> Lorentzian(0.05), NL...)(xs, params)
-        @test_throws ArgumentError calculate_radiance_lines(xs, SpectraUtils._DualLine[], PointSample())
+        @test_throws ArgumentError calculate_radiance_lines(xs, OpticalSpectrumModels._DualLine[], PointSample())
 
         for method in (PointSample(min_amplitude = 1.0e-30), BinAverage(bin_width = 0.1, min_amplitude = 1.0e-30))
             sp = RadianceSpectrum(; species = SpeciesModel(; transitions = [t1],

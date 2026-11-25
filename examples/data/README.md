@@ -1,6 +1,6 @@
 # README
 
-Data used for comparisons with calculations from `SpectraUtils.jl`
+Data used for comparisons with calculations from `OpticalSpectrumModels.jl`
 
 ## Radis
 Radis version: 0.17

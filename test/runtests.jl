@@ -53,10 +53,10 @@ end
 end
 
 @safetestset "Code quality (Aqua.jl)" begin
-    using Aqua, SpectraUtils
+    using Aqua, OpticalSpectrumModels
     # DataInterpolations is used only by the ExoMol extension, which can load
     # only the parent package's deps.
-    Aqua.test_all(SpectraUtils; stale_deps = (ignore = [:DataInterpolations],))
+    Aqua.test_all(OpticalSpectrumModels; stale_deps = (ignore = [:DataInterpolations],))
 end
 
 @safetestset "JET analysis" begin

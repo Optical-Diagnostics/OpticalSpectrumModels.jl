@@ -1,10 +1,10 @@
-module SpectraUtilsExoMolExt
+module OpticalSpectrumModelsExoMolExt
 
 using ExoMol
-import SpectraUtils: State, ElectricDipoleTransition, Boltzmann, h, c0, kB, u_kg, molecular_mass_kg
+import OpticalSpectrumModels: State, ElectricDipoleTransition, Boltzmann, h, c0, kB, u_kg, molecular_mass_kg
 
-import SpectraUtils: make_transition_list
-import SpectraUtils
+import OpticalSpectrumModels: make_transition_list
+import OpticalSpectrumModels
 using DataInterpolations
 
 
@@ -111,7 +111,7 @@ then the sum over that subset. `Ts` applies only here: it is the grid of a
 spline that speeds up the sum, by default 50–10 000 K in 10 K steps. Outside
 the grid the sum is evaluated directly.
 """
-function SpectraUtils.Boltzmann(data::ExoMol.Isotopologue, parent::State; Ts = nothing,
+function OpticalSpectrumModels.Boltzmann(data::ExoMol.Isotopologue, parent::State; Ts = nothing,
                                 temperature_function = (p) -> p[Val(:T)])
     states = State.(ExoMolState.(data.states))
     if data.partition_function !== nothing && all(s -> s in parent, states)

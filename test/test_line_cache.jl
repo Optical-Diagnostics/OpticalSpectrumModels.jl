@@ -1,8 +1,8 @@
-using SpectraUtils
+using OpticalSpectrumModels
 using Test
 using ComponentArrays
 using ForwardDiff
-import SpectraUtils: convolve, LineShape
+import OpticalSpectrumModels: convolve, LineShape
 
 include("synthetic.jl")
 

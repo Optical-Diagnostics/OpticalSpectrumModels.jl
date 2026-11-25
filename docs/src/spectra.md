@@ -3,31 +3,31 @@
 Five models build a spectrum from a list of quantum
 transitions, a population distribution, and a line-shape function:
 
-- [`EmissionSpectrum`](@ref SpectraUtils.EmissionSpectrum): optically-thin
+- [`EmissionSpectrum`](@ref OpticalSpectrumModels.EmissionSpectrum): optically-thin
   emission, summing `A_ul · f_u · φ(ν)` per line (photon-rate by default,
   energy-weighted via `amplitude = SpectralRadiance()`).
-- [`RadianceSpectrum`](@ref SpectraUtils.RadianceSpectrum): self-absorbing
+- [`RadianceSpectrum`](@ref OpticalSpectrumModels.RadianceSpectrum): self-absorbing
   radiative transfer through one or more uniform slabs, with an LTE fast path
   (Kirchhoff's law) and a general non-LTE α/j path.
-- [`AbsorptionCoefficientSpectrum`](@ref SpectraUtils.AbsorptionCoefficientSpectrum):
+- [`AbsorptionCoefficientSpectrum`](@ref OpticalSpectrumModels.AbsorptionCoefficientSpectrum):
   the absorption coefficient `α(ν)` itself.
-- [`AbsorbanceSpectrum`](@ref SpectraUtils.AbsorbanceSpectrum): Napierian
+- [`AbsorbanceSpectrum`](@ref OpticalSpectrumModels.AbsorbanceSpectrum): Napierian
   absorbance `α·L = −ln(I/I₀)`.
-- [`TransmittanceSpectrum`](@ref SpectraUtils.TransmittanceSpectrum):
+- [`TransmittanceSpectrum`](@ref OpticalSpectrumModels.TransmittanceSpectrum):
   normalized transmission `e^{−αL}`.
 
-Every model takes a `Tuple` of [`SpeciesModel`](@ref SpectraUtils.SpeciesModel)
+Every model takes a `Tuple` of [`SpeciesModel`](@ref OpticalSpectrumModels.SpeciesModel)
 via its `species` keyword: several species, each with its own line list,
 distribution, number density and synthesis method, share one slab, with
 coefficients added before anything nonlinear. The flat per-species keywords are
 shorthand for a single species. All models but `AbsorptionCoefficientSpectrum`
-also take a `slabs` keyword, a `Tuple` of [`Slab`](@ref SpectraUtils.Slab), for a
+also take a `slabs` keyword, a `Tuple` of [`Slab`](@ref OpticalSpectrumModels.Slab), for a
 line of sight through several regions.
 
 ## Example
 
 ```julia
-using SpectraUtils, ComponentArrays
+using OpticalSpectrumModels, ComponentArrays
 
 # A toy band: rotational levels J of an excited state, all radiating to one
 # ground state. Energies in cm⁻¹.
@@ -60,14 +60,14 @@ runtime `Symbol` (`p[:T]`) dispatches dynamically and allocates on every line.
 ## API
 
 ```@docs
-SpectraUtils.SpeciesModel
-SpectraUtils.Slab
-SpectraUtils.StaticLineshapes
-SpectraUtils.EmissionSpectrum
-SpectraUtils.RadianceSpectrum
-SpectraUtils.AbsorptionCoefficientSpectrum
-SpectraUtils.AbsorbanceSpectrum
-SpectraUtils.TransmittanceSpectrum
+OpticalSpectrumModels.SpeciesModel
+OpticalSpectrumModels.Slab
+OpticalSpectrumModels.StaticLineshapes
+OpticalSpectrumModels.EmissionSpectrum
+OpticalSpectrumModels.RadianceSpectrum
+OpticalSpectrumModels.AbsorptionCoefficientSpectrum
+OpticalSpectrumModels.AbsorbanceSpectrum
+OpticalSpectrumModels.TransmittanceSpectrum
 ```
 
 ## Synthesis method: binning and wing cutoff

@@ -1,4 +1,4 @@
-using SpectraUtils
+using OpticalSpectrumModels
 using FittingUtils, NonlinearSolve, Turing
 using ComponentArrays, Distributions, Random
 using Statistics

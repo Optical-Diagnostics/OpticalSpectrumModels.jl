@@ -1,12 +1,12 @@
 """
-    SpectraUtils
+    OpticalSpectrumModels
 
 Utilities for building physical spectroscopic models (species states,
 transitions, population distributions, and full emission/radiance spectra)
 on top of the line-shape/line-synthesis primitives provided by the sibling
 package `SpectralLines.jl`.
 """
-module SpectraUtils
+module OpticalSpectrumModels
 
 using SpectralLines
 import SpectralLines: convolve, line_index_range, spectrum_eltype, LineShape, numtype_convert, check_axes

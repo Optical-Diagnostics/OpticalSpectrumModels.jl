@@ -1,4 +1,4 @@
-using SpectraUtils
+using OpticalSpectrumModels
 using Test
 using ComponentArrays
 
@@ -24,8 +24,8 @@ slab(s, Lkey = :L) = Slab(; species = s, path_length_function = p -> p[Lkey])
         # Fast-path guard: equal temperature values -> common T; unequal -> nothing.
         sA = SpeciesModel(; transitions = [t1], distribution_function = bdk(:TA), lineshape_function = lsf)
         sB = SpeciesModel(; transitions = [t1], distribution_function = bdk(:TB), lineshape_function = lsf)
-        @test SpectraUtils._lte_temperature((sA, sA), p) == 800.0
-        @test SpectraUtils._lte_temperature((sA, sB), p) === nothing
+        @test OpticalSpectrumModels._lte_temperature((sA, sA), p) == 800.0
+        @test OpticalSpectrumModels._lte_temperature((sA, sB), p) === nothing
     end
 
     @testset "one Slab ≡ species form; two half-slabs ≡ one full slab" begin

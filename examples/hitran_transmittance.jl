@@ -1,4 +1,4 @@
-using SpectraUtils
+using OpticalSpectrumModels
 using CairoMakie
 
 # Transmittance of a gas layer from a HITRAN or HITEMP `.par` file.
@@ -18,7 +18,7 @@ const T     = 1000.0      # K
 const P_atm = 1.0         # atm
 const x     = 0.05        # mole fraction
 const L     = 10.0        # cm
-const N     = P_atm * 101325 * x / (SpectraUtils.kB * T) / 1e6   # molecules/cm³
+const N     = P_atm * 101325 * x / (OpticalSpectrumModels.kB * T) / 1e6   # molecules/cm³
 const Tref  = 296.0       # K, HITRAN reference temperature
 
 par_lines = HITRAN.read_par(par_file; wn_min = 2000.0, wn_max = 2300.0)

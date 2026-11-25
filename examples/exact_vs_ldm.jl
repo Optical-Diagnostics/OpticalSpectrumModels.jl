@@ -1,4 +1,4 @@
-using SpectraUtils
+using OpticalSpectrumModels
 using CairoMakie
 
 # `PointSample()` against `LDM()` on eight Voigt lines, one of them a pure

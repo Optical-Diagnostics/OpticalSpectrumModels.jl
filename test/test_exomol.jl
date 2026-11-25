@@ -1,4 +1,4 @@
-using SpectraUtils
+using OpticalSpectrumModels
 using ExoMol
 using Test
 using ComponentArrays
@@ -8,8 +8,8 @@ using ForwardDiff
 # Neither N2 transition file names its range, so wn_range keeps all ~8.4M lines.
 const _N2  = load_isotopologue("N2", "14N2", "WCCRMT"; wn_range = (25000.0, 40000.0))
 const _SiO = load_isotopologue("SiO", "28Si-16O", "EBJT"; wn_range = (1080.0, 1320.0))
-const ext  = Base.get_extension(SpectraUtils, :SpectraUtilsExoMolExt)
-const c2   = 100 * SpectraUtils.h * SpectraUtils.c0 / SpectraUtils.kB
+const ext  = Base.get_extension(OpticalSpectrumModels, :OpticalSpectrumModelsExoMolExt)
+const c2   = 100 * OpticalSpectrumModels.h * OpticalSpectrumModels.c0 / OpticalSpectrumModels.kB
 
 loaded_states(data) = State.(ext.ExoMolState.(data.states))
 
