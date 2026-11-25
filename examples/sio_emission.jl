@@ -1,5 +1,5 @@
-using SpectraUtils
-using SpectraUtils: kB
+using OpticalSpectrumModels
+using OpticalSpectrumModels: kB
 using ExoMol
 using ComponentArrays
 using CairoMakie

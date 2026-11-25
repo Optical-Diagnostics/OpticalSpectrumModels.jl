@@ -1,4 +1,4 @@
-using SpectraUtils
+using OpticalSpectrumModels
 using Test
 using ComponentArrays
 using ForwardDiff
@@ -70,7 +70,7 @@ mk(lsf; kw...) = EmissionSpectrum(;
         # The stored static lines under a Dual pass: Float64 position/shape,
         # Dual amplitude.
         pd = ComponentVector(T = ForwardDiff.Dual(900.0, 1.0))
-        ls = SpectraUtils._fill_species_emission!(
+        ls = OpticalSpectrumModels._fill_species_emission!(
             sp_s.species_caches[1][1], sp_s.slabs[1].species[1], sp_s.instrument_function, sp_s.amplitude, pd)
         @test eltype(ls).parameters[1] == Float64                     # Tx (position/shape)
         @test eltype(ls).parameters[2] <: ForwardDiff.Dual            # Ta (amplitude)
@@ -80,7 +80,7 @@ mk(lsf; kw...) = EmissionSpectrum(;
         sp_s = mk(lsf_sta)
         s = sp_s.slabs[1].species[1]
         c = sp_s.species_caches[1][1]
-        refill(T) = SpectraUtils._fill_species_emission!(c, s, sp_s.instrument_function, sp_s.amplitude,
+        refill(T) = OpticalSpectrumModels._fill_species_emission!(c, s, sp_s.instrument_function, sp_s.amplitude,
                                                        ComponentVector(T = T))
         ls1 = refill(800.0)
         shapes1 = [l.shape for l in ls1]

@@ -1,4 +1,4 @@
-using SpectraUtils
+using OpticalSpectrumModels
 using ExoMol
 using ComponentArrays
 

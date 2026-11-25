@@ -72,6 +72,6 @@ jobs:
         shell: julia --project=docs --color=yes {0}
         run: |
           using Documenter: DocMeta, doctest
-          using SpectraUtils
-          DocMeta.setdocmeta!(SpectraUtils, :DocTestSetup, :(using SpectraUtils); recursive=true)
-          doctest(SpectraUtils)
+          using OpticalSpectrumModels
+          DocMeta.setdocmeta!(OpticalSpectrumModels, :DocTestSetup, :(using OpticalSpectrumModels); recursive=true)
+          doctest(OpticalSpectrumModels)

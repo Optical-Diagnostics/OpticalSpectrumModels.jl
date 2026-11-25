@@ -1,4 +1,4 @@
-using SpectraUtils
+using OpticalSpectrumModels
 using ExoMol
 using ComponentArrays
 using FittingUtils
@@ -43,7 +43,7 @@ sp = RadianceSpectrum(;
         transitions              = tl,
         distribution_function    = bd,
         lineshape_function       = sio_lineshape,
-        number_density_function  = (p) -> p.P * p.x / SpectraUtils.kB / p.T / 1e6),  # Pa·mol⁻¹·K⁻¹ → cm⁻³
+        number_density_function  = (p) -> p.P * p.x / OpticalSpectrumModels.kB / p.T / 1e6),  # Pa·mol⁻¹·K⁻¹ → cm⁻³
     path_length_function = (p) -> p.L,
 )
 

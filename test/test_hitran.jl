@@ -1,5 +1,5 @@
-using SpectraUtils
-using SpectraUtils: HITRAN
+using OpticalSpectrumModels
+using OpticalSpectrumModels: HITRAN
 using Test
 using ComponentArrays
 
@@ -162,8 +162,8 @@ end
 
 @testset "HITRAN.Line does not shadow Line" begin
     # If both exported `Line`, it would be ambiguous after
-    # `using SpectraUtils.HITRAN`.
+    # `using OpticalSpectrumModels.HITRAN`.
     m = Module()
-    Core.eval(m, :(using SpectraUtils, SpectraUtils.HITRAN))
-    @test Core.eval(m, :Line) === SpectraUtils.Line
+    Core.eval(m, :(using OpticalSpectrumModels, OpticalSpectrumModels.HITRAN))
+    @test Core.eval(m, :Line) === OpticalSpectrumModels.Line
 end

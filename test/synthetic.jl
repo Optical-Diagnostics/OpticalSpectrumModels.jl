@@ -1,6 +1,6 @@
 # Two synthetic transitions on distinct vibrational levels, shared by the
 # model tests. `bd` is a Boltzmann distribution over exactly these states.
-using SpectraUtils: h, c0, c0_cm, kB
+using OpticalSpectrumModels: h, c0, c0_cm, kB
 
 const c2 = 100 * h * c0 / kB   # cm·K, second radiation constant
 

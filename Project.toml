@@ -1,4 +1,4 @@
-name = "SpectraUtils"
+name = "OpticalSpectrumModels"
 uuid = "a0c45ec9-8886-4288-b58f-471f3de187f0"
 version = "0.1.0"
 authors = ["Jan Kuhfeld <jan@kuhfeld.net> and contributors"]
@@ -17,7 +17,7 @@ rev = "main"
 url = "https://github.com/Optical-Diagnostics/SpectralLines.jl.git"
 
 [extensions]
-SpectraUtilsExoMolExt = "ExoMol"
+OpticalSpectrumModelsExoMolExt = "ExoMol"
 
 [compat]
 Aqua = "0.8"

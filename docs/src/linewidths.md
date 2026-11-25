@@ -18,7 +18,7 @@ N₂ at 2330 cm⁻¹ and 300 K, pressure-broadened at 1 atm (all inputs SI excep
 the wavenumber):
 
 ```julia
-using SpectraUtils
+using OpticalSpectrumModels
 
 σ = sigma_doppler(2330.0, 300; m = 28 * 1.66054e-27)          # cm⁻¹, ν̃ in cm⁻¹, m in kg
 γ = gamma_hard_sphere(101325, 300;                            # p in Pa

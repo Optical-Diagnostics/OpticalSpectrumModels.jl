@@ -1,5 +1,5 @@
 using BenchmarkTools
-using SpectraUtils
+using OpticalSpectrumModels
 using ComponentArrays
 using ForwardDiff
 using ExoMol

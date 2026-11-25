@@ -122,7 +122,7 @@ energy difference, or pass `wavenumber` directly.
 
 The input to the spectrum models; [`make_transition_list`](@ref) builds a
 `Vector` of these from a line-list source (ExoMol, or HITRAN via
-[`SpectraUtils.HITRAN`](@ref)).
+[`OpticalSpectrumModels.HITRAN`](@ref)).
 
 `pressure_shift` is the shift of the line centre per unit pressure in
 cm⁻¹/atm (HITRAN's `δ_air`). The models apply it only through a
